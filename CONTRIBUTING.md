@@ -22,3 +22,12 @@ But some rules are mentioned to maintain the overall simplicity and readability 
 comments and proper spacing wherever necessary.
 4. Make sure the pages you create matches the overall visual style of the project.
 5. Write good and descriptive commit messages and commit often.
+
+## Pull Request Guidelines
+
+Your Pull Request should contain the following
+
+1. **A Short and Concise Title**
+2. **A descriptive explanation of what you implemented**
+3. **A screenshot if you implemented html pages**
+4. **The issue you are closing**
