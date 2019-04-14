@@ -2,7 +2,7 @@
 
 # Hackathonistas
 
-This is the code for https://www.hackathonistas.github.io 
+This is the code for https://hackathonistas.github.io 
 
 ## Todo 
 
