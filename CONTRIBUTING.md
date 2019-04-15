@@ -31,3 +31,8 @@ Your Pull Request should contain the following
 2. **A descriptive explanation of what you implemented**
 3. **A screenshot if you implemented html pages**
 4. **The issue you are closing**
+
+## Join our Development Slack Channel
+
+If you are interested to join our development communication channel in order to discuss / to clear your queries about how you should contribute etc. , get an invite join link at 
+https://join.slack.com/t/hackathonistasdev/shared_invite/enQtNjExOTkwNjkzMTc0LTNkOTA0M2Q4MmJjYTQ4YTNjMGRhYTIzMDM5MDZjNDY4Zjc1ZGY2MTczOTAxYWM1YjM5N2QzNzFkZGFkZjI3ZGQ
