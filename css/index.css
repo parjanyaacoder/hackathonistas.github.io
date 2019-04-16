@@ -1,14 +1,13 @@
 .header {
     background-color: #212121;
     height: 100%;
-
+    padding: 3rem;
 }
 
 .header h1 {
     font-family: "Share Tech Mono", monospace;
     font-size: 6rem;
     text-align: center;
-    padding: 3rem;
     color: white;
 }
 
@@ -36,6 +35,13 @@
     font-family: "Roboto Mono", serif;
     font-size: 1.5rem;
     padding: 2rem;
+}
+
+.content p a {
+    color: blue;
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 1.5rem;
 }
 
 .content a {
