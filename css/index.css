@@ -1,14 +1,13 @@
 .header {
     background-color: #212121;
     height: 100%;
-
+    padding: 3rem;
 }
 
 .header h1 {
     font-family: "Share Tech Mono", monospace;
     font-size: 6rem;
     text-align: center;
-    padding: 3rem;
     color: white;
 }
 
