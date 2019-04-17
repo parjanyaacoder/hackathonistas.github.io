@@ -34,5 +34,4 @@ Your Pull Request should contain the following
 
 ## Join our Development Slack Channel
 
-If you are interested to join our development communication channel in order to discuss / to clear your queries about how you should contribute etc. , get an invite join link at 
-https://join.slack.com/t/hackathonistasdev/shared_invite/enQtNjExOTkwNjkzMTc0LTNkOTA0M2Q4MmJjYTQ4YTNjMGRhYTIzMDM5MDZjNDY4Zjc1ZGY2MTczOTAxYWM1YjM5N2QzNzFkZGFkZjI3ZGQ
+If you are interested to join our development communication channel i.e Slack , in order to discuss / to clear your queries about how you should contribute etc. , drop us a message expressing your interest at https://t.me/ayonroy2000 . You will be provided an invite link to the channel if we find your passion & knowledge a perfect fit to make this initiative an awesome one !!
