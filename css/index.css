@@ -9,32 +9,14 @@
     font-size: 6rem;
     text-align: center;
     color: white;
-}
-
-@media screen and (max-width: 700px){
-    .header h1 {
-        font-size: 2.5rem;
-        padding-left: 0rem;
-        padding-right: 0rem;
-    }
-}
-
-@media screen and (max-width: 600px){
-    .header h1 {
-        font-size: 3rem;
-    }
-}
-
-@media screen and (max-width: 400px){
-    .header h1 {
-        font-size: 2rem;
-    }
+    transition: font-size 0.1s;
 }
 
 .content p {
     font-family: "Roboto Mono", serif;
     font-size: 1.5rem;
     padding: 2rem;
+    transition: font-size 0.1s;
 }
 
 .content p a {
@@ -42,6 +24,7 @@
     margin: 0rem;
     padding: 0rem;
     font-size: 1.5rem;
+    transition: font-size 0.1s;
 }
 
 .content a {
@@ -56,5 +39,35 @@
 @media screen and (max-width: 600px){
     .content a {
         margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .header h1 {
+        font-size: 4.5rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .header h1 {
+        font-size: 3.5rem;
+    }
+
+    .content p, .content p a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .header h1 {
+   	font-size: 2rem; 
     }
 }
