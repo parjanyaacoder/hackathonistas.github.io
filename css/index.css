@@ -1,7 +1,7 @@
 .home {
     margin-top: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: repeat(2,1fr);
@@ -73,12 +73,22 @@
 }
 
 
-/**/
+/* ------------------ Contact ----------------->*/
+
+.contact {
+    margin-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-family: 'Rubik', sans-serif;
+    color: #212121;
+}
 
 
 @media screen and (max-width: 600px){
     .home {
         grid-template-columns: repeat(1,1fr);
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .faq {
@@ -103,5 +113,10 @@
         padding-left: 0rem;
         padding-right: 0rem;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
