@@ -47,17 +47,12 @@
 
 .faq {
     margin-top: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     font-family: 'Rubik', sans-serif;
 }
 
-.faq h4 {
-    padding-left: 3rem;
-}
-
 .faq p {
-    padding-left: 3rem;
     color: #212121;
 }
 
@@ -65,16 +60,30 @@
 
 .team {
     margin-top: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     font-family: 'Rubik', sans-serif;    
 }
 
+.team .grid {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+
+/**/
 
 
 @media screen and (max-width: 600px){
     .home {
         grid-template-columns: repeat(1,1fr);
+    }
+
+    .faq {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .faq h4 {
@@ -83,5 +92,16 @@
 
     .faq p {
         padding-left: 0rem;
+    }
+
+    .team {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .team .grid {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
