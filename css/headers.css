@@ -3,6 +3,10 @@ CSS for the header and the navbar
 Both index.html and hackathons.html use it
 */
 
+html {
+    scroll-behavior: smooth;
+}
+
 .header {
     background-color: #212121;
     height: 100%;

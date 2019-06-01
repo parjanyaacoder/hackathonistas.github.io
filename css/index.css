@@ -41,14 +41,6 @@
     background-color: #212121;
 }
 
-/*--------- OUR TEAM ------------->*/
-
-.team {
-    margin-top: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-family: 'Rubik', sans-serif;    
-}
 
 
 /*----------  FAQ ------------->*/
@@ -60,8 +52,36 @@
     font-family: 'Rubik', sans-serif;
 }
 
+.faq h4 {
+    padding-left: 3rem;
+}
+
+.faq p {
+    padding-left: 3rem;
+    color: #212121;
+}
+
+/*--------- OUR TEAM ------------->*/
+
+.team {
+    margin-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: 'Rubik', sans-serif;    
+}
+
+
+
 @media screen and (max-width: 600px){
     .home {
         grid-template-columns: repeat(1,1fr);
+    }
+
+    .faq h4 {
+        padding-left: 0rem;
+    }
+
+    .faq p {
+        padding-left: 0rem;
     }
 }
