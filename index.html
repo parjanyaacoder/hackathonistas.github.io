@@ -9,29 +9,165 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <link rel="stylesheet" href="css/headers.css">
     <link rel="stylesheet" href="css/index.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap" rel="stylesheet">
+ 
 </head>
 <body>
+    <!-- the css for the content below is in headers.css -->
+
     <div class="container-fluid header">
         <h1>HACKATHONISTAS</h1>
     </div>
 
-    <div class="container-fluid content">
-        <p>A one stop destination to get notified about the latest hackathons all around the world 
-            in a variety of domains like Artificial Intelligence , Machine Learning , 
-            Web Development , Android Development etc. <br><br> If you are looking to team up for 
-            any hackathon, our Telegram Group of 600+ Hackathon enthusiasts are 
-            always here to help you out. ✌️</p>
-        
-        <p style="padding-top: 0rem">If you have never participated in a hackathon , you may explore a quick guide to get started
-            <a href="about.html">here</a> 
-        </p>
+    <div class="container-fluid navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#ourteam">Our Team</a></li>
+            <li><a href="hackathons.html">Upcoming Hackathons</a></li>
+        </ul>
+    </div>
+
+    <!-- the css for the content below is in index.css -->
     
-        <a href="https://t.me/joinchat/I54yzBLD9NsnCzVgYkS1MQ" target="_blank" class="btn btn-primary"><i class="fab fa-telegram"></i> Join the Telegram Group</a>
-        <a href="https://github.com/hackathonistas" target="_blank" class="btn btn-dark"><i class="fab fa-github"></i>  Follow us on Github</a>
+    <div class="container-fluid home">
+        <div class="info">️️
+            <br>
+            <h2>Hii, This is Hackathonistas. ✌️</h2>
+            Get to know about the latest hackathons all around the world 
+            in a variety of domains like AI, ML, Web Development, Android etc. <br>
+            If you are looking to team up for any hackathon,
+            our Telegram Group of 1k+ Hackathon enthusiasts are always here to help you out. <br>
+            We are also pretty active on GitHub.
+        </div>
+
+        <div class="links">
+            <br>
+            <a class="telegram" href="https://t.me/joinchat/I54yzBLD9NsnCzVgYkS1MQ" target="_blank"><i class="fab fa-telegram"></i> Hackathonistas on Telegram</a><br>
+            <a class="github" href="https://www.github.com/hackathonistas" target="_blank"><i class="fab fa-github"></i> Hackathonistas on GitHub</a>
+        </div>
+    </div>
+    
+    <br>
+
+    <!-- FAQ             -->
+    <div id="faq" class="container-fluid faq">
+        <br>
+        <h1>FAQ</h1>
+        
+        <br>
+
+        <h4>What is a Hackathon? 😕</h4>
+        <p>A hackathon (also known as a hack day, hackfest or codefest) is a sprint-like event in 
+            which programmers, designers, project managers, and others collaborate intensely 
+            on software projects. The goal of a hackathon is to create functioning software 
+            based on some idea by the end of the event.</p><br>
+
+        
+        <h4>Who can attend a Hackathon? 🚦</h4>
+        <p>
+            ANYONE can attend. Yep, you read it right. Anyone who is interested in programming and 
+            loves to learn and build cool stuff can attend. If a hackathon targets a specific 
+            audience (ex, college students), then obviously only college students are allowed to attend but
+            generally hackathons are for everyone.
+        </p><br>
+
+        <h4>Do I need Programming Experience? 💻</h4>
+        <p>
+            You need to know the basics atleast. The organizers usually hold workshops throughout the hackathon for people
+            who are new to programming and wish to learn more about a particular topic. 
+            Mentors are also available 24/7. So if you go to a hackathon without knowing what you want to do, 
+            that’s totally fine because you will have these mentors at your service to help and guide you.
+        </p><br>
+
+        <h4>Why should I bother attending a Hackathon? 💤</h4>
+        <p>
+            It’s a win-win situation for you because you get: <br>
+
+            - to LEARN new things <br>
+            - to BUILD something cool <br>
+            - to Meet new people <br>
+            - to Meet recruiters <br>
+            - FREE FOOD <br>
+            - FREE SWAG (Developers live for them. LOL) <br>
+        </p><br>
+
+        <h4>How much does it cost?</h4>
+        <p>
+            It’s FREE. Almost all hackathons are free of cost. Though some hackathons like AngelHack etc. 
+            do have a registration cost . Also, some hackathons provide travel reimbursements. :)
+        </p><br>
+
+        <h4>Still have Questions ?</h4>
+        <p>Send them on our <a href="https://t.me/joinchat/I54yzBLD9NsnCzVgYkS1MQ">Telegram Group</a>, we would be more than happy answer your questions 😁</p>
 
     </div>
+    
+    <br>
+
+
+    <!-- OUR TEAM             -->
+    <div id="ourteam" class="container-fluid team">
+        <h1>Our Team</h1><br>
+        <div class="grid">
+
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Ayon Roy</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Group Admin</h6>
+                    <a href="https://github.com/ayonroy2000" class="card-link" targer="_blank"><i class="fab fa-github"></i> Github</a>
+                    <a href="mailto:ayon.roy2000@gmail.com" class="card-link" targer="_blank"><i class="fas fa-envelope-open-text"></i> Email</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Junaid H Rahim</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Lead Website Maintainer</h6>
+                    <a href="https://www.github.com/junaidrahim" class="card-link" targer="_blank"><i class="fab fa-github"></i> Github</a>
+                    <a href="mailto:junaidrahim8d@gmail.com" class="card-link" targer="_blank"><i class="fas fa-envelope-open-text"></i> Email</a>
+                </div>
+            </div>
+
+        
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Md. Bilal Zubair</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Website Maintainer</h6>
+                    <a href="https://github.com/glowinginthedark" class="card-link" targer="_blank"><i class="fab fa-github"></i> Github</a>
+                    <a href="" class="card-link" targer="_blank"><i class="fas fa-envelope-open-text"></i> Email</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">ShreeHari Vaasistha</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Website Maintainer</h6>
+                    <a href="https://github.com/ShreehariVaasishta" class="card-link" targer="_blank"><i class="fab fa-github"></i> Github</a>
+                    <a href="mailto:shreehari9481@gmail.com" class="card-link" targer="_blank"><i class="fas fa-envelope-open-text"></i> Email</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+
+
+    <!-- CONTACT             -->
+    <div class="container-fluid contact">
+        <h5>You can find the source code of this website at
+            <a href="https://www.github.com/hackathonistas/hackathonistas.github.io">
+                our github</a>
+        </h5>
+        
+    </div>
+    <br>
 </body>
 </html>

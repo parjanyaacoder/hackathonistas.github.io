@@ -1,0 +1,52 @@
+/*  
+CSS for the header and the navbar
+Both index.html and hackathons.html use it
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: #212121;
+    height: 100%;
+    padding: 1rem;
+}
+
+.header h1 {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 2.2rem;
+    text-align: center;
+    color: white;
+    transition: font-size 0.1s;
+    margin: 0rem;
+}
+
+.navbar {
+    background-color: #f5f5f5;
+    height: 100%;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.navbar ul {
+    margin: 0rem;
+    padding: 0rem;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: block;
+    cursor: pointer;
+    padding: 0.6rem;
+    float: left;
+    margin-right: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}

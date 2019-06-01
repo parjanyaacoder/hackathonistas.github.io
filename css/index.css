@@ -1,73 +1,122 @@
-.header {
-    background-color: #212121;
-    height: 100%;
-    padding: 3rem;
+.home {
+    margin-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
 }
 
-.header h1 {
-    font-family: "Share Tech Mono", monospace;
-    font-size: 6rem;
+.home .info {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.home .info h2 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+
+.home .links a {
     text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
     color: white;
-    transition: font-size 0.1s;
-}
-
-.content p {
-    font-family: "Roboto Mono", serif;
-    font-size: 1.5rem;
-    padding: 2rem;
-    transition: font-size 0.1s;
-}
-
-.content p a {
-    color: blue;
-    margin: 0rem;
-    padding: 0rem;
-    font-size: 1.5rem;
-    transition: font-size 0.1s;
-}
-
-.content a {
-    margin: 2rem;
-    margin-top: 0rem;
     padding: 1rem;
-    font-family: "Roboto Mono", serif;
-    color: white;
-    font-size: 1.3rem;
+    display: block;
+    border-radius: 0.5rem;
+    width: fit-content;
 }
+
+.home .links .telegram {
+    background-color: #2196fc;
+}
+
+.home .links .github {
+    background-color: #212121;
+}
+
+
+
+/*----------  FAQ ------------->*/
+
+.faq {
+    margin-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.faq p {
+    color: #212121;
+}
+
+/*--------- OUR TEAM ------------->*/
+
+.team {
+    margin-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-family: 'Rubik', sans-serif;    
+}
+
+.team .grid {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+
+/* ------------------ Contact ----------------->*/
+
+.contact {
+    margin-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-family: 'Rubik', sans-serif;
+    color: #212121;
+}
+
 
 @media screen and (max-width: 600px){
-    .content a {
-        margin: 1rem;
+    .home {
+        grid-template-columns: repeat(1,1fr);
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
-}
 
-@media screen and (max-width: 800px){
-    .header h1 {
-        font-size: 4.5rem;
+    .faq {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .faq h4 {
+        padding-left: 0rem;
+    }
+
+    .faq p {
+        padding-left: 0rem;
+    }
+
+    .team {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .team .grid {
         padding-left: 0rem;
         padding-right: 0rem;
-    }
-}
-
-@media screen and (max-width: 650px){
-    .header h1 {
-        font-size: 3.5rem;
+        grid-template-columns: repeat(1, 1fr);
     }
 
-    .content p, .content p a {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 500px){
-    .header h1 {
-        font-size: 2.5rem;
-    }
-}
-
-@media screen and (max-width: 400px){
-    .header h1 {
-   	font-size: 2rem; 
+    .contact {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
