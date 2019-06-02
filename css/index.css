@@ -42,7 +42,6 @@
 }
 
 
-
 /*----------  FAQ ------------->*/
 
 .faq {
@@ -83,38 +82,47 @@
     color: #212121;
 }
 
+/* ---------- MOBILE COMPATIBILITY----------->*/
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1000px){
+    .team .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
     .home {
         grid-template-columns: repeat(1,1fr);
         padding-left: 2rem;
         padding-right: 2rem;
     }
+}
 
+@media screen and (max-width: 600px){
     .faq {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-
+    
     .faq h4 {
         padding-left: 0rem;
     }
-
+    
     .faq p {
         padding-left: 0rem;
     }
-
+    
     .team {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-
+    
     .team .grid {
         padding-left: 0rem;
         padding-right: 0rem;
         grid-template-columns: repeat(1, 1fr);
     }
-
+    
     .contact {
         padding-left: 2rem;
         padding-right: 2rem;
