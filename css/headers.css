@@ -50,3 +50,10 @@ html {
     text-decoration: none;
     color: black;
 }
+
+
+@media screen and (max-width: 400px) {
+    .header h1 {
+        font-size: 1.4rem;
+    }
+}
