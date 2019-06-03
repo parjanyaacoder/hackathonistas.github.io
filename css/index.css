@@ -1,3 +1,14 @@
+.tagline img {
+    width:100%;
+}
+
+.tagline p {
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
 .home {
     margin-top: 1rem;
     padding-left: 4rem;
