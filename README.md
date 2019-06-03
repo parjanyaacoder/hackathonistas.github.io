@@ -1,4 +1,4 @@
-![HEADER](assets/header.png)
+![HEADER](assets/logo.png)
 
 # Hackathonistas
 
