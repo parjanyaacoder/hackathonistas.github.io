@@ -32,6 +32,13 @@ Your Pull Request should contain the following
 3. **A screenshot if you implemented html pages**
 4. **The issue you are closing**
 
+## Some Common Guidelines
+
+1. **Write clear meaningful git commit messages (Must read http://chris.beams.io/posts/git-commit/)**
+2. **Make sure your PR's description contains GitHub's special keyword references that automatically close the related issue when the PR is merged. (More info at https://github.com/blog/1506-closing-issues-via-pull-requests)**
+3. **When you make very minor changes to a PR of yours, make sure that you squash your commits afterwards so that you don't have an absurd number of commits for a very small fix. (Learn how to squash at https://davidwalsh.name/squash-commits-git)**
+4. **When you're submitting a PR for a UI-related issue, it would be really great if you add a screenshot of your change or a link to a deployment where it can be tested out along with your PR. It makes it very easy for the reviewers and you'll also get reviews quicker.**
+
 ## Join our Development Slack Channel
 
-If you are interested to join our development communication channel i.e Slack , in order to discuss / to clear your queries about how you should contribute etc. , drop us a message expressing your interest at https://t.me/ayonroy2000 . You will be provided an invite link to the channel if we find your passion & knowledge a perfect fit to make this initiative an awesome one !!
+If you are interested to join our development communication channel i.e Slack , in order to discuss / to clear your queries about how you should contribute etc. , drop us an email by expressing your interest [here](mailto:hackathonistas@gmail.com?subject=Request%20to%20join%20Hackathonistas%20Slack%20Development%20Workspace&cc=ayon.roy2000@gmail.com). You will be provided an invite link to the channel if we find your passion & knowledge a perfect fit to make this initiative an awesome one !!
