@@ -1,0 +1,25 @@
+.content {
+    font-family: 'Rubik', sans-serif;
+}
+
+.content h1 {
+    font-weight: 400;
+    font-size: 2.3rem;
+}
+
+.content .cards_container {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+}
+
+@media screen and (max-width: 800px){
+    .content .cards_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+}
