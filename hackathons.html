@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="css/hackathons.css">
     
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap" rel="stylesheet">
+    
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="container-fluid header">
@@ -24,14 +27,36 @@
     <div class="container-fluid navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Our Team</a></li>
-            <li><a href="index.html">FAQ</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#ourteam">Our Team</a></li>
             <li><a href="hackathons.html">Upcoming Hackathons</a></li>
         </ul>
     </div>
 
-    <div class="container-fluid content">
-        That list of hackathons will go here, Still under development.
+    <div class="container content">
+        <br><br>
+        <h1 class="mb-4">Upcoming Hackathons</h1>
+        <h5 class="btn btn-primary mb-5">Click here to add a Hackathon</h5>
+        <div class="cards_container">
+            
+            <!-- Add n number of this using js -->
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h3 class="card-title mb-4">Hackathon Name</h3>
+                    <h6 class="card-subtitle mb-2">
+                        <i class="fas fa-calendar-week text-primary mb-2"></i> <span class="text-primary"> Start 1/1/2019 </span><br>
+                        <i class="fas fa-calendar-week text-danger mb-3"></i> <span class="text-danger"> End 1/1/2019 </span>
+                    </h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Organizer</h6>
+                    <p class="card-text">Description of hachathon.</p>
+                    <a href="#" class="card-link">Link 1</a>
+                    <a href="#" class="card-link">Link 2</a>
+                </div>
+            </div>
+            
+            
+        </div>
+        <br><br>
     </div>
 
     
