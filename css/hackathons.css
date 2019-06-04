@@ -14,6 +14,20 @@
     grid-gap: 1rem;
 }
 
+.header {
+    background-color: #212121;
+    height: 100%;
+    padding: 1rem;
+}
+
+.header h1 {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 2.2rem;
+    text-align: center;
+    color: white;
+    transition: font-size 0.1s;
+    margin: 0rem;
+}
 @media screen and (max-width: 800px){
     .content .cards_container {
         grid-template-columns: repeat(1, 1fr);
