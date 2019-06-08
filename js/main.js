@@ -63,6 +63,8 @@ window.onload = () => {
 
 			cards_container.innerHTML = cc_html + card;
 		});
+
+		document.getElementsByClassName('spinner-border')[0].style.display = "none";
 	});
 }
 
