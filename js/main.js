@@ -30,7 +30,7 @@ window.onload = () => {
 					            <h3>${doc.name}</h3>
 					        </div>
 					        <div class="card-body text-muted">
-					            <h4 class="text-dark">Organizer: ${doc.organizer}</h4>`;
+					            <h4 class="text-dark"><b>Organizer:</b> ${doc.organizer}</h4>`;
 			
 			if ( doc.description != '' ) {
 				card += `<p class="card-text"><h6>${doc.description}</h6></p>`;
