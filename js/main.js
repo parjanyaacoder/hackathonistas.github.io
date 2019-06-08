@@ -38,7 +38,7 @@ window.onload = () => {
 
 			card += `</div>
 					        <div class="card-body">            
-					            <i class="fas fa-calendar-week text-success mb-3"></i> <span class="text-success pulsate"> Starts ${toDateTime(doc.start_date.seconds)} </span><br>`;
+					            <i class="fas fa-calendar-week text-success mb-3"></i> <span class="text-success"> Starts ${toDateTime(doc.start_date.seconds)} </span><br>`;
 
 
 			if ( doc.hasOwnProperty('end_date') ) {
