@@ -34,15 +34,22 @@ window.onload = () => {
 			
 			if ( doc.description != '' ) {
 				card += `<p class="card-text"><h6>${doc.description}</h6></p>`;
-			}			
+			}
 
 			card += `</div>
-					        <div class="card-body">            
-					            <i class="fas fa-calendar-week text-success mb-3"></i> <span class="text-success"> Starts ${toDateTime(doc.start_date.seconds)} </span><br>`;
+					        <div class="card-body bottom_body">            
+					            <i class="fas fa-calendar-week text-success mb-3"></i> <span class="text-success">`;
 
+			if ( doc.start_date == "Ongoing" ) {
+				card += `Ongoing </span><br>`;
+			} else {
+				card += `Starts ${toDateTime(doc.start_date.seconds)} </span><br>`;
+			}
 
 			if ( doc.hasOwnProperty('end_date') ) {
 				card += `<i class="fas fa-calendar-week text-danger mb-3"></i> <span class="text-danger pulsate"> Ends ${toDateTime(doc.end_date.seconds)} </span>`;
+			} else {
+				card += `<i class="fas fa-calendar-week text-danger mb-3" style="visibility: hidden;"></i> <span class="text-danger pulsate"></span>`;
 			}
 
 

@@ -26,6 +26,9 @@
     opacity: 0.5;
 }
 
+.bottom_body {
+    max-height: 148px;
+}
 
 @-webkit-keyframes pulsate {
     0% { 
