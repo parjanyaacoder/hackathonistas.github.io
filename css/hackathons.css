@@ -2,6 +2,10 @@
     font-family: 'Rubik', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
 .content h1 {
     font-weight: 400;
     font-size: 2.3rem;
@@ -26,8 +30,44 @@
     opacity: 0.5;
 }
 
+.description-box {
+    display: flex;
+    align-items: flex-end;
+}
+
+.plus_parent {
+    background-color: lightgrey;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.plus {
+    display: inline-block;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.description-text {
+    display: none;
+    min-height: 183px;
+    max-height: 183px;
+}
+
+.plus.rotate {
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.card-header {
+    max-height: 66px;
+}
+
 .bottom_body {
-    max-height: 148px;
+    max-height: 183px;
 }
 
 @-webkit-keyframes pulsate {
