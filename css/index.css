@@ -66,6 +66,17 @@
     color: #212121;
 }
 
+
+/*------------ Code of Conduct------------>*/
+
+.code_of_conduct {
+    margin-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+
 /*--------- OUR TEAM ------------->*/
 
 .team {
@@ -123,7 +134,7 @@
         padding-left: 0rem;
     }
     
-    .team {
+    .team, .code_of_conduct {
         padding-left: 2rem;
         padding-right: 2rem;
     }
