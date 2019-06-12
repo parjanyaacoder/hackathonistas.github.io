@@ -12,10 +12,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content .cards_container {
+    margin-top: 50px;
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1rem;
+    justify-items: left;
+}
+
+.card {
+    width: 20rem;
 }
 
 .header {
@@ -90,12 +96,39 @@ h1, h2, h3, h4, h5, h6 {
     transition: font-size 0.1s;
     margin: 0rem;
 }
-@media screen and (max-width: 800px){
+
+@media screen and (max-width: 1200px){
+    .content {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
     .content .cards_container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .content h1 {
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .content {
+        padding: 0px;   
+    }
+}
+
+@media screen and (max-width: 800px){
+    .content {
+        text-align: center;
+    }
+
+    .card {
+        text-align: left;
+    }
+
+    .content .cards_container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
     }
 }
