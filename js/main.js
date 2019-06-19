@@ -10,12 +10,6 @@ var firebaseConfig = {
 	appId: "1:822318635327:web:14aae62f1a30082a"
 };
 
-function toDateTime(secs) {
-	var t = new Date(1970, 0, 1);
-	t.setSeconds(secs);
-	return '' + t.getDate() + '/' + t.getMonth() + '/' + t.getFullYear();
-}
-
 function checkOverflow(el) {
 	var curOverflow = el.style.overflow;
 
@@ -66,11 +60,11 @@ window.onload = () => {
 			if ( doc.start_date == "Ongoing" ) {
 				card += `Ongoing </span><br>`;
 			} else {
-				card += `Starts ${toDateTime(doc.start_date.seconds)} </span><br>`;
+				card += `Starts ${doc.start_date} </span><br>`;
 			}
 
 			if ( doc.hasOwnProperty('end_date') ) {
-				card += `<i class="fas fa-calendar-week text-danger mb-3"></i> <span class="text-danger pulsate"> Ends ${toDateTime(doc.end_date.seconds)} </span>`;
+				card += `<i class="fas fa-calendar-week text-danger mb-3"></i> <span class="text-danger pulsate"> Ends ${doc.end_date} </span>`;
 			} else {
 				card += `<i class="fas fa-calendar-week text-danger mb-3" style="visibility: hidden;"></i> <span class="text-danger pulsate"></span>`;
 			}
