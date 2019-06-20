@@ -1,15 +1,5 @@
 (function () {
 
-var firebaseConfig = {
-	apiKey: "AIzaSyAR6hFGNnSYEwKAGx4lsSp5brwsbpMKp88",
-	authDomain: "hackathonistas-97572.firebaseapp.com",
-	databaseURL: "https://hackathonistas-97572.firebaseio.com",
-	projectId: "hackathonistas-97572",
-	storageBucket: "hackathonistas-97572.appspot.com",
-	messagingSenderId: "822318635327",
-	appId: "1:822318635327:web:14aae62f1a30082a"
-};
-
 function checkOverflow(el) {
 	var curOverflow = el.style.overflow;
 
@@ -25,8 +15,6 @@ function checkOverflow(el) {
 }
 
 window.onload = () => {
-	firebase.initializeApp(firebaseConfig);
-
 	var firestore = firebase.firestore();
 
 	let cards_container = document.getElementsByClassName('cards_container')[0];
@@ -92,8 +80,6 @@ window.onload = () => {
 			if ( checkOverflow(ch) ) {
 				ch.innerHTML = ch.innerHTML.replace('h3', 'h5');
 				ch.style.height = "58px";
-				ch.style.display = "flex";
-				ch.style.alignItems = "center"
 			};
 
 			//description show and hide functionality
