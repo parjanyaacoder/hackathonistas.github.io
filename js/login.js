@@ -41,20 +41,19 @@ function signupSubmit () {
 (function () {
 
 window.onload = () => {
-	let signup_toggle = document.getElementById('show_signup_box');
+	let box_toggle1 = document.getElementsByClassName('box_toggle')[0];
+	let box_toggle2 = document.getElementsByClassName('box_toggle')[1];
 	let signup_box = document.getElementsByClassName('signup_box')[0];
 	let login_box = document.getElementsByClassName('login_box')[0];
 
-	signup_toggle.addEventListener('click', () => {
-		if ( signup_toggle.textContent.indexOf('Sign up') > -1 ) {
-			signup_toggle.innerHTML = 'Login';
-			login_box.style.display = 'none';
-			signup_box.style.display = 'block';
-		} else {
-			signup_toggle.innerHTML = 'Sign up';
-			signup_box.style.display = 'none';
-			login_box.style.display = 'block';
-		}
+	box_toggle1.addEventListener('click', () => {
+		login_box.style.display = 'none';
+		signup_box.style.display = 'block';
+	});
+
+	box_toggle2.addEventListener('click', () => {
+		signup_box.style.display = 'none';
+		login_box.style.display = 'block';
 	});
 }
 
