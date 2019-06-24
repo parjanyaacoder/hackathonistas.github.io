@@ -33,7 +33,6 @@ html {
 .navbar ul {
     margin: 0rem;
     padding: 0rem;
-    overflow: hidden;
     margin-left: 1rem;
 }
 
@@ -47,8 +46,37 @@ html {
 }
 
 .navbar ul li a {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     text-decoration: none;
     color: black;
+}
+
+#login_button {
+    position: absolute;
+    right: 0;
+}
+
+#account_menu {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    background-color: #f5f5f5;
+}
+
+#account_dropdown {
+    padding-top: 1.5rem;
+    display: none;
+    flex-direction: column;
+}
+
+.account_dropdown_item {
+    background-color: #f5f5f5;
+    text-align: center;
+    margin: 0.3rem;
+    display: block;
 }
 
 .collapse-content .fa.fa-heart:hover {
@@ -73,6 +101,23 @@ a.text-shine:hover {
   to {
     -webkit-mask-position: -50%;
   }
+}
+
+@media screen and (max-width: 780px) {
+    #account_menu {
+        position: relative;
+        text-align: center;
+    }
+
+    #account_dropdown {
+        position: absolute;
+        background-color: #f5f5f5;
+        padding: 0.6rem;
+        padding-top: 1.5rem;
+        margin-left: -1.35rem;
+    }
+
+    #
 }
 
 @media screen and (max-width: 300px) {
