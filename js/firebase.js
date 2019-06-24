@@ -32,6 +32,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 			});
 		});
 	} else {
-		ul.innerHTML = ul.innerHTML + '<li id="login_button"><a href="login.html" class="text-right">Log in</a></li>';
+		ul.innerHTML = ul.innerHTML + '<li id="login_button"><a href="login.html" class="text-right text-shine">Log in</a></li>';
 	}
 });
