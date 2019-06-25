@@ -1,0 +1,26 @@
+.content {
+	max-width: 750px;
+	display: none;
+}
+
+#spinner {
+	text-align: center;
+}
+
+textarea {
+	resize: none;
+}
+
+.err {
+	visibility: hidden;
+}
+
+#form_err {
+	display: none;
+}
+
+@media screen and (max-width: 750px) {
+	.content {
+		padding: 3rem;
+	}
+}
