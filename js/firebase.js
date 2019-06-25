@@ -24,7 +24,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 		ul.innerHTML = ul.innerHTML + '<li id="account_menu">\
 			<a id="account_button" class="text-shine">Account &#128317;</a>\
 			<div id="account_dropdown">\
-				<a class="account_dropdown_item btn btn-secondary" href="#">Settings</a>\
+				<a class="account_dropdown_item btn btn-secondary" href="settings.html">Settings</a>\
 				<a class="account_dropdown_item btn btn-secondary" id="signout_button" href="#">Sign out</a>\
 			</div>\
 		</li>';
@@ -62,7 +62,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 		sb.addEventListener('click', () => {
 			firebase.auth().signOut().then(() => {
 				document.getElementById('account_menu').remove();
-				location.reload();
+				//location.reload();
+				window.location.href = 'hackathons.html';
 			});
 		});
 
