@@ -1,0 +1,29 @@
+.content {
+	max-width: 750px;
+	text-align: center;
+}
+
+.update_box {
+	display: none;
+	text-align: left;
+}
+
+p {
+	margin: 0px;
+}
+
+.firebase_info {
+	font-size: 20px;
+}
+
+.spinner-border {
+	margin-top: 1rem;
+}
+
+#err_no_match {
+	display: none;
+}
+
+#delete_account_box > form {
+	display: none;
+}

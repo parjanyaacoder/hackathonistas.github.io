@@ -40,11 +40,11 @@ function loginSubmit () {
 	let email = document.getElementById('user_email').value;
 	let password = document.getElementById('user_password').value;
 
-	document.getElementsByTagName('form')[0].reset();
-
 	content.appendChild(createSpinner());
 
 	firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
+		document.getElementsByTagName('form')[0].reset();
+
 		content.innerHTML = '<br><br><h1 class="mb-3"><span class="text-success">Successfully</span> logged in!</h1>';
 
 		content.appendChild(createRedirectMessage());
