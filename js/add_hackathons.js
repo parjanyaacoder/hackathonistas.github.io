@@ -26,8 +26,8 @@ function submitHackathon () {
 	let start_month = document.getElementById('start_month').value;
 	let start_year = document.getElementById('start_year').value;
 	let end_year = document.getElementById('end_year').value;
-	let end_day = document.getElementById('end_day');
-	let end_month = document.getElementById('end_month');
+	let end_day = document.getElementById('end_day').value;
+	let end_month = document.getElementById('end_month').value;
 	let form = document.querySelector('form[onsubmit="return submitHackathon()"]');
 	let button = form.querySelector('button[type="submit"]');
 
@@ -84,7 +84,7 @@ function submitHackathon () {
 		obj.end_date = end_day + ' ' + end_month + ' ' + end_year;
 	}
 
-	pending_hackathons.add().then(() => {
+	pending_hackathons.add(obj).then(() => {
 		let txt = '<h4>You have <span class="text-success">successfully</span> submitted a new hackathon. The admins will review it shortly. Thank you! :)</h4>';
 
 		form.querySelector('.spinner-border').remove();
