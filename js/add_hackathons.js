@@ -155,7 +155,7 @@ function addCharLengthTrackers (input, box, displayCount, limit) {
 	input = document.getElementById(input);
 	box = document.getElementById(box);
 
-	input.addEventListener('keydown', () => {
+	input.addEventListener('input', () => {
 		if ( displayCount ) {
 			box.querySelector('.count').innerHTML = input.value.length;
 		}
