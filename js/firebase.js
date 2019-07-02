@@ -21,13 +21,20 @@ firebase.auth().onAuthStateChanged(function(user) {
 		}
 
 		// display account button if the user is logged in
-		ul.innerHTML = ul.innerHTML + '<li id="account_menu">\
+		let html = '<li id="account_menu">\
 			<a id="account_button" class="text-shine">Account &#128317;</a>\
 			<div id="account_dropdown">\
-				<a class="account_dropdown_item btn btn-secondary" href="settings.html">Settings</a>\
-				<a class="account_dropdown_item btn btn-secondary" id="signout_button" href="#">Sign out</a>\
+				<a class="account_dropdown_item btn btn-secondary" href="settings.html">Settings</a>';
+
+		if ( user.uid == 'UsROzfm6alTDEBMXdn63oGIMUwL2' ) {
+			html += '<a class="account_dropdown_item btn btn-secondary" href="pending_hackathons.html">Pending hackathons</a>';
+		}
+
+		html += '<a class="account_dropdown_item btn btn-secondary" id="signout_button" href="#">Sign out</a>\
 			</div>\
 		</li>';
+
+		ul.innerHTML = ul.innerHTML + html;
 
 		let ab = document.getElementById('account_button');
 		let sb = document.getElementById('signout_button');
