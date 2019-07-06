@@ -104,6 +104,10 @@ a.text-shine:hover {
 }
 
 @media screen and (max-width: 780px) {
+    #login_button {
+        position: relative;
+    }
+
     #account_menu {
         position: relative;
         text-align: center;
@@ -116,8 +120,6 @@ a.text-shine:hover {
         padding-top: 1.5rem;
         margin-left: -1.35rem;
     }
-
-    #
 }
 
 @media screen and (max-width: 300px) {
