@@ -23,6 +23,75 @@ function createUpdateButton () {
 	return e;
 }
 
+function createCheckbox (key, text) {
+	let div = document.createElement('div');
+	let input = document.createElement('input');
+	let label = document.createElement('label');
+
+	div.className = 'form-check';
+	div.id = key;
+	input.className = 'form-check-input';
+	input.type = 'checkbox';
+	input.checked = true;
+	label.className = 'form-check-label';
+	label.textContent = text;
+
+	div.appendChild(input);
+	div.appendChild(label);
+
+	return div;
+}
+
+function updateParticipatingDB () {
+
+}
+
+function updateParticipatingHackathons () {
+	let checkboxes = document.getElementById('ph_form').children;
+	let user = firebase.auth().currentUser;
+	let user_info_collection = firebase.firestore().collection('user_info');
+	let u_docref = user_info_collection.doc(user.uid);
+
+	let new_participating = [];
+
+	for (let i = 0; i < checkboxes.length; i++) {
+		if ( checkboxes[i].getElementsByClassName('form-check-input')[0].checked ) {
+			new_participating.push(checkboxes[i].id);
+		} else {
+			let h = firebase.firestore().collection('teammates').doc(checkboxes[i].id);
+
+			h.get().then((doc) => {
+				if (doc.exists) {
+					let t = doc.data().teammates;
+
+					for (let i = 0; i < t.length; i++) {
+						if ( t[i] == user.email ) {
+							t.splice(i, 1);
+							break;
+						}
+					}
+
+					h.set({
+						teammates: t
+					});
+				}
+			})
+		}
+	}
+
+	u_docref.get().then((doc) => {
+		if ( doc.exists ) {
+			u_docref.set({
+				participating: new_participating
+			}).then(() => {
+				location.reload();
+			})
+		}
+	});
+
+	return false;
+}
+
 function updateEmail () {
 	let email = document.getElementById('update_email').value;
 	let form = document.getElementById('email_update_box').querySelector('form');
@@ -47,7 +116,7 @@ function updateEmail () {
 		}, 3000);
 
 	});
-	
+
 	return false;
 }
 
@@ -79,7 +148,7 @@ function updateName () {
 		}, 3000);
 
 	});
-	
+
 	return false;
 }
 
@@ -191,6 +260,42 @@ function showUserCurrentEmail () {
 	document.getElementById('user_current_email').textContent = firebase.auth().currentUser.email;
 }
 
+function showParticipatingHackathons () {
+	let box = document.getElementById('ph_form');
+	let user = firebase.auth().currentUser;
+	let user_info_collection = firebase.firestore().collection('user_info');
+	let u_docref = user_info_collection.doc(user.uid);
+
+	if ( user ) {
+		u_docref.get().then((doc) => {
+			if ( !doc.exists ) {
+				box.textContent = "You are not currently looking for teammates for any hackathon. Click 'Find teammates' on a hackathon listing.";
+				return;
+			} else {
+				let current = doc.data().participating;
+				let hackathons = firebase.firestore().collection('hackathons');
+
+				if (current.length == 0) {
+					box.textContent = "You are not currently looking for teammates for any hackathon. Click 'Find teammates' on a hackathon listing.";
+					return;
+				}
+
+				for (let i = 0; i < current.length; i++) {
+					let name = hackathons.doc(current[i]).get().then((doc) => {
+						let name = doc.data().name;
+						box.appendChild(createCheckbox(current[i], name));
+
+						if ( box.parentElement.getElementsByClassName('btn').length == 0 ) {
+							box.parentElement.appendChild(document.createElement('br'));
+							box.parentElement.appendChild(createUpdateButton());
+						}
+					});
+				}
+			}
+		});
+	}
+}
+
 (function () {
 
 window.onload = () => {
@@ -212,6 +317,7 @@ window.onload = () => {
 			displaySettingsPage();
 			showUserCurrentEmail();
 			showUserDisplayName();
+			showParticipatingHackathons();
 		} else {
 			showLoggedOutMessage();
 		}
@@ -225,7 +331,7 @@ window.onload = () => {
 			prior_delete[i].style.display = 'none';
 		}
 
-		form.style.display = 'block';		
+		form.style.display = 'block';
 	});
 
 	go_back.addEventListener('click', () => {

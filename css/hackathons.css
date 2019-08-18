@@ -32,6 +32,7 @@ h5 > a:hover {
 
 .card {
     width: 20rem;
+    height: 25rem;
 }
 
 .header {
@@ -42,7 +43,7 @@ h5 > a:hover {
 
 .pulsate {
     -webkit-animation: pulsate 1s ease-out;
-    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-iteration-count: infinite;
     opacity: 0.5;
 }
 
@@ -86,14 +87,18 @@ h5 > a:hover {
     max-height: 183px;
 }
 
+.email_box {
+  overflow-y: auto;
+}
+
 @-webkit-keyframes pulsate {
-    0% { 
+    0% {
         opacity: 0.5;
     }
-    50% { 
+    50% {
         opacity: 3.0;
     }
-    100% { 
+    100% {
         opacity: 0.5;
     }
 }
@@ -124,7 +129,7 @@ h5 > a:hover {
 
 @media screen and (max-width: 991px){
     .content {
-        padding: 0px;   
+        padding: 0px;
     }
 }
 
