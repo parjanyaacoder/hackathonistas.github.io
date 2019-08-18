@@ -42,8 +42,61 @@ function createCheckbox (key, text) {
 	return div;
 }
 
-function updateParticipatingDB () {
+function removeEmailReferencesFromDB (uid, email) {
+	let user_info_collection = firebase.firestore().collection('user_info');
+	let u_docref = user_info_collection.doc(uid);
 
+	u_docref.get().then((doc) => {
+		if (doc.exists) {
+				let p = doc.data().participating;
+
+				for (let i = 0; i < p.length; i++) {
+					let h = firebase.firestore().collection('teammates').doc(p[i]);
+					h.get().then((doc) => {
+						let t = doc.data().teammates;
+						let i = t.indexOf(email);
+						t.splice(i, 1);
+						h.set({
+							teammates: t
+						});
+					});
+				}
+		}
+
+		u_docref.delete();
+	});
+}
+
+function updateEmailReferencesInDB (old, new_email) {
+	let user = firebase.auth().currentUser;
+
+	if (!user) {
+		alert("user has signed out");
+		return;
+	}
+
+	let user_info_collection = firebase.firestore().collection('user_info');
+	let u_docref = user_info_collection.doc(user.uid);
+
+	u_docref.get().then((doc) => {
+		if (doc.exists) {
+				let p = doc.data().participating;
+
+				for (let i = 0; i < p.length; i++) {
+					let h = firebase.firestore().collection('teammates').doc(p[i]);
+					h.get().then((doc) => {
+						let t = doc.data().teammates;
+						let i = t.indexOf(old);
+						t[i] = new_email;
+						alert(t);
+						h.set({
+							teammates: t
+						});
+					});
+				}
+		}
+
+	});
 }
 
 function updateParticipatingHackathons () {
@@ -53,6 +106,11 @@ function updateParticipatingHackathons () {
 	let u_docref = user_info_collection.doc(user.uid);
 
 	let new_participating = [];
+
+	if (!user) {
+		alert("user has signed out");
+		return;
+	}
 
 	for (let i = 0; i < checkboxes.length; i++) {
 		if ( checkboxes[i].getElementsByClassName('form-check-input')[0].checked ) {
@@ -94,12 +152,14 @@ function updateParticipatingHackathons () {
 
 function updateEmail () {
 	let email = document.getElementById('update_email').value;
+	let old = firebase.auth().currentUser.email;
 	let form = document.getElementById('email_update_box').querySelector('form');
 
 	form.querySelector('button[type="submit"]').remove();
 	form.appendChild(createSpinner());
 
 	firebase.auth().currentUser.updateEmail(email).then(() => {
+		updateEmailReferencesInDB(old, email);
 		form.reset();
 		form.querySelector('.spinner-border').remove();
 		form.innerHTML = form.innerHTML + '<p>Email <span class="text-success">successfully</span> updated!</p>';
@@ -194,6 +254,7 @@ function updatePassword (event) {
 }
 
 function deleteAccount (event) {
+	let user = firebase.auth().currentUser;
 	let content = document.getElementsByClassName('content')[0];
 	let form = document.getElementById('delete_account_box').querySelector('form');
 	let form_g = document.getElementById('delete_account_box').querySelector('.form-group');
@@ -203,6 +264,8 @@ function deleteAccount (event) {
 	let your_final_spinner = createSpinner();
 	your_final_spinner.className = your_final_spinner.className.replace('success', 'danger');
 	form.appendChild(your_final_spinner);
+
+	removeEmailReferencesFromDB(user.uid, user.email);
 
 	firebase.auth().currentUser.delete().then(() => {
 		window.location.href = "hackathons.html";

@@ -91,6 +91,10 @@ h5 > a:hover {
   overflow-y: auto;
 }
 
+.email_list_item {
+  margin: 0;
+}
+
 @-webkit-keyframes pulsate {
     0% {
         opacity: 0.5;

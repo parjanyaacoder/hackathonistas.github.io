@@ -156,13 +156,16 @@ function showEmailList (spinner, box, card) {
 		let list = doc.data().teammates;
 
 		for (let i = 0; i < list.length; i++) {
+			let p = document.createElement('p');
+			p.className = "email_list_item";
 			let a = document.createElement('a');
 			let subject = "Come join me to participate in this hackathon!";
 			let message = "Hey there!%0A%0ACome join my team to participate in " + card.getElementsByClassName('card-header')[0].getElementsByTagName('h3')[0].textContent + ".%0A%0A";
 
 			a.href = "mailto:" + list[i] + "?subject=" + subject + "&body=" + message;
 			a.textContent = list[i];
-			list_container.appendChild(a);
+			p.appendChild(a);
+			list_container.appendChild(p);
 		}
 
 		let btns = card.getElementsByClassName('btn');
@@ -188,7 +191,6 @@ function displayAgreement (card) {
 	let card_bodies = card.getElementsByClassName('card-body');
 	let user = firebase.auth().currentUser;
 	let user_info_collection = firebase.firestore().collection('user_info');
-	let u_docref = user_info_collection.doc(user.uid);
 	let new_card_body = document.createElement('div');
 
 	new_card_body.className = 'card-body text-info email_box';
@@ -221,6 +223,7 @@ function displayAgreement (card) {
 			let spinner = email_box.getElementsByClassName('spinner-border')[0];
 
 			if ( user ) {
+				let u_docref = user_info_collection.doc(user.uid);
 				u_docref.get().then((doc) => {
 					if ( doc.exists ) {
 							let p = doc.data().participating;
@@ -244,7 +247,7 @@ function displayAgreement (card) {
 
 			} else {
 				spinner.remove();
-				email_box.textContent = 'Please <a href="login.html">sign in</a> to find teammates.';
+				email_box.innerHTML = 'Please <a href="login.html">sign in</a> to find teammates.';
 			}
 
 			continue;
