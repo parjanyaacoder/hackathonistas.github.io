@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="css/headers.css">
     <link rel="stylesheet" href="css/settings.css">
-    
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
+
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap" rel="stylesheet">
-    
+
 </head>
 <body>
     <div class="container-fluid header">
@@ -38,7 +38,17 @@
         <h1 class="mb-3">Account settings</h1>
 
         <div class="spinner-border text-success" role="status"></div>
-       
+
+        <div class="update_box" id="participating_hackathons">
+          <br><br>
+          <h3>Participating hackathons</h3>
+          <h5>Uncheck hackathons to stop displaying your email in the "Find teammates" section</h5>
+          <br>
+          <form onsubmit="return updateParticipatingHackathons()">
+            <div id="ph_form"></div>
+          </form>
+        </div>
+
         <div class="update_box" id="email_update_box">
             <br><br>
             <h3>Update your Email Address</h3>
