@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 		// display account button if the user is logged in
 		let html = '\
-			<a id="account_button" class="text-shine">Account &#128317;</a>\
+			<a id="account_button" class="text-shine">Account</a>\
 			<div id="account_dropdown">\
 				<a class="account_dropdown_item btn btn-secondary" href="settings.html">Settings</a>';
 
@@ -30,7 +30,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 			html += '<a class="account_dropdown_item btn btn-secondary" href="pending_hackathons.html">Pending hackathons</a>';
 		}
 
-		html += '<a class="account_dropdown_item btn btn-secondary" id="signout_button" href="#">Sign out</a>\
+		html += '<a class="account_dropdown_item btn btn-secondary" id="signout_button" href="index.html">Sign out</a>\
 			</div>';
 
 		ul.innerHTML = ul.innerHTML + html;
