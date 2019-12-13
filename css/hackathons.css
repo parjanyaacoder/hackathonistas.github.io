@@ -33,6 +33,7 @@ h5 > a:hover {
 .card {
     width: 20rem;
     height: 25rem;
+    overflow: scroll;
 }
 
 .header {

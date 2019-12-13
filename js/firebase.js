@@ -11,7 +11,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 firebase.auth().onAuthStateChanged(function(user) {
-	let ul = document.getElementsByClassName('navbar')[0].getElementsByTagName('ul')[0];
+	let ul = document.getElementsByClassName('nav-links')[0];
 
 	if ( user ) {
 		let lb = document.getElementById('login_button');
@@ -21,8 +21,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 		}
 
 		// display account button if the user is logged in
-		let html = '<li id="account_menu">\
-			<a id="account_button" class="text-shine">Account &#128317;</a>\
+		let html = '\
+			<a id="account_button" class="text-shine">Account</a>\
 			<div id="account_dropdown">\
 				<a class="account_dropdown_item btn btn-secondary" href="settings.html">Settings</a>';
 
@@ -30,9 +30,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 			html += '<a class="account_dropdown_item btn btn-secondary" href="pending_hackathons.html">Pending hackathons</a>';
 		}
 
-		html += '<a class="account_dropdown_item btn btn-secondary" id="signout_button" href="#">Sign out</a>\
-			</div>\
-		</li>';
+		html += '<a class="account_dropdown_item btn btn-secondary" id="signout_button" href="index.html">Sign out</a>\
+			</div>';
 
 		ul.innerHTML = ul.innerHTML + html;
 
@@ -75,6 +74,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 		});
 
 	} else {
-		ul.innerHTML = ul.innerHTML + '<li id="login_button"><a href="login.html" class="text-shine">Log in</a></li>';
+		ul.innerHTML = ul.innerHTML + '<a id="login_button" href="login.html" class="text-shine">Log in</a>';
 	}
 });
